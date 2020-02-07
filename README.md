@@ -13,6 +13,41 @@ import sys
 init_printing()
 ```
 
+Before doing the real math, first let us familiarize ourselves with the basic functions in SymPy that we are going to use. Before using a symbolic mathematical variable, we have to define the variable using `Symbol()`. Then we can go on and doing simple mathematics just like what we will do in Python.
+
+
+```python
+# Define new symbolic mathematical variables and add them up
+a = Symbol('a')
+b = Symbol('b')
+a + b
+```
+
+
+<img src="https://render.githubusercontent.com/render/math?math=a + b">
+
+Another helpful function in SymPy that we are going to use a lot is taking the derivative, `diff()'.
+
+
+```python
+# Taking the derivative of a mathematical expression with respect to the varaible a
+diff(sin(a + b) - (a + b) ** (a + b), a)
+```
+
+
+<img src="https://render.githubusercontent.com/render/math?math=- \left(a + b\right)^{a + b} \left(\log{\left (a + b \right )} + 1\right) + \cos{\left (a + b \right )}">
+
+The last function that we are going to use heavily later is the subs() method of a SymPy expression. We will use this function to substitute certain part of the express with something that is more readable and understandable to human eyes.
+
+
+```python
+# Subtitute (a + b) with t to simplify the expression
+t = Symbol('t')
+diff(sin(a + b) - (a + b) ** (a + b), a).subs(a + b, t)
+```
+
+<img src="https://render.githubusercontent.com/render/math?math=- t^{t} \left(\log{\left (t \right )} + 1\right) + \cos{\left (t \right )}">
+
 Next, let's set up our model by specifying a few basic parameters in the model.
 
 
