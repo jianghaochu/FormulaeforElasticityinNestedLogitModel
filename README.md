@@ -35,7 +35,7 @@ diff(sin(a + b) - (a + b) ** (a + b), a)
 ```
 
 
-<img src="https://render.githubusercontent.com/render/math?math=- \left(a + b\right)^{a + b} \left(\log{\left (a + b \right )} + 1\right) + \cos{\left (a + b \right )}">
+<img src="https://render.githubusercontent.com/render/math?math=- \left(a %2B b\right)^{a %2B b} \left(\log{\left (a %2B b \right )} %2B 1\right) %2B \cos{\left (a %2B b \right )}">
 
 The last function that we are going to use heavily later is the subs() method of a SymPy expression. We will use this function to substitute certain part of the express with something that is more readable and understandable to human eyes.
 
