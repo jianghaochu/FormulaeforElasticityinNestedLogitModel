@@ -20,7 +20,7 @@ Before doing the real math, first let us familiarize ourselves with the basic fu
 # Define new symbolic mathematical variables and add them up
 a = Symbol('a')
 b = Symbol('b')
-a + b
+a %2B b
 ```
 
 
