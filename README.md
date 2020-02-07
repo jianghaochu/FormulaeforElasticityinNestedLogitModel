@@ -20,11 +20,11 @@ Before doing the real math, first let us familiarize ourselves with the basic fu
 # Define new symbolic mathematical variables and add them up
 a = Symbol('a')
 b = Symbol('b')
-a %2B b
+a + b
 ```
 
 
-<img src="https://render.githubusercontent.com/render/math?math=a + b">
+<img src="https://render.githubusercontent.com/render/math?math=a %2B b">
 
 Another helpful function in SymPy that we are going to use a lot is taking the derivative, `diff()'.
 
