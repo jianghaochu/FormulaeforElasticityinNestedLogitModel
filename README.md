@@ -117,11 +117,16 @@ createPlot(create_dict(0))
 
 
 Now that we finished setting up our model we can start calculating the formulae of interest. Let's first review the formulae for the share and elasticities in the Nested Logit Model. The share of one end node in the Nested Logit Model is
+
 <img src="https://render.githubusercontent.com/render/math?math=s_j = \frac{\left(\left(\left(e^{\frac{v_{0}}{\theta_{2 0}}} + e^{\frac{v_{1}}{\theta_{2 0}}} + e^{\frac{v_{2}}{\theta_{2 0}}}\right)^{\frac{\theta_{2 0}}{\theta_{1 0}}} + \left(e^{\frac{v_{3}}{\theta_{2 1}}} + e^{\frac{v_{4}}{\theta_{2 1}}} + e^{\frac{v_{5}}{\theta_{2 1}}}\right)^{\frac{\theta_{2 1}}{\theta_{1 0}}}\right)^{\frac{\theta_{1 0}}{\theta_{0 0}}} + \left(\left(e^{\frac{v_{6}}{\theta_{2 2}}} + e^{\frac{v_{7}}{\theta_{2 2}}} + e^{\frac{v_{8}}{\theta_{2 2}}}\right)^{\frac{\theta_{2 2}}{\theta_{1 1}}} + \left(e^{\frac{v_{10}}{\theta_{2 3}}} + e^{\frac{v_{11}}{\theta_{2 3}}} + e^{\frac{v_{9}}{\theta_{2 3}}}\right)^{\frac{\theta_{2 3}}{\theta_{1 1}}}\right)^{\frac{\theta_{1 1}}{\theta_{0 0}}}\right)^{\theta_{0 0}} \left(\left(e^{\frac{v_{0}}{\theta_{2 0}}} + e^{\frac{v_{1}}{\theta_{2 0}}} + e^{\frac{v_{2}}{\theta_{2 0}}}\right)^{\frac{\theta_{2 0}}{\theta_{1 0}}} + \left(e^{\frac{v_{3}}{\theta_{2 1}}} + e^{\frac{v_{4}}{\theta_{2 1}}} + e^{\frac{v_{5}}{\theta_{2 1}}}\right)^{\frac{\theta_{2 1}}{\theta_{1 0}}}\right)^{\frac{\theta_{1 0}}{\theta_{0 0}}} \left(e^{\frac{v_{0}}{\theta_{2 0}}} + e^{\frac{v_{1}}{\theta_{2 0}}} + e^{\frac{v_{2}}{\theta_{2 0}}}\right)^{\frac{\theta_{2 0}}{\theta_{1 0}}} e^{\frac{v_{0}}{\theta_{2 0}}}}{\left(\left(\left(\left(e^{\frac{v_{0}}{\theta_{2 0}}} + e^{\frac{v_{1}}{\theta_{2 0}}} + e^{\frac{v_{2}}{\theta_{2 0}}}\right)^{\frac{\theta_{2 0}}{\theta_{1 0}}} + \left(e^{\frac{v_{3}}{\theta_{2 1}}} + e^{\frac{v_{4}}{\theta_{2 1}}} + e^{\frac{v_{5}}{\theta_{2 1}}}\right)^{\frac{\theta_{2 1}}{\theta_{1 0}}}\right)^{\frac{\theta_{1 0}}{\theta_{0 0}}} + \left(\left(e^{\frac{v_{6}}{\theta_{2 2}}} + e^{\frac{v_{7}}{\theta_{2 2}}} + e^{\frac{v_{8}}{\theta_{2 2}}}\right)^{\frac{\theta_{2 2}}{\theta_{1 1}}} + \left(e^{\frac{v_{10}}{\theta_{2 3}}} + e^{\frac{v_{11}}{\theta_{2 3}}} + e^{\frac{v_{9}}{\theta_{2 3}}}\right)^{\frac{\theta_{2 3}}{\theta_{1 1}}}\right)^{\frac{\theta_{1 1}}{\theta_{0 0}}}\right)^{\theta_{0 0}} + 1\right) \left(\left(\left(e^{\frac{v_{0}}{\theta_{2 0}}} + e^{\frac{v_{1}}{\theta_{2 0}}} + e^{\frac{v_{2}}{\theta_{2 0}}}\right)^{\frac{\theta_{2 0}}{\theta_{1 0}}} + \left(e^{\frac{v_{3}}{\theta_{2 1}}} + e^{\frac{v_{4}}{\theta_{2 1}}} + e^{\frac{v_{5}}{\theta_{2 1}}}\right)^{\frac{\theta_{2 1}}{\theta_{1 0}}}\right)^{\frac{\theta_{1 0}}{\theta_{0 0}}} + \left(\left(e^{\frac{v_{6}}{\theta_{2 2}}} + e^{\frac{v_{7}}{\theta_{2 2}}} + e^{\frac{v_{8}}{\theta_{2 2}}}\right)^{\frac{\theta_{2 2}}{\theta_{1 1}}} + \left(e^{\frac{v_{10}}{\theta_{2 3}}} + e^{\frac{v_{11}}{\theta_{2 3}}} + e^{\frac{v_{9}}{\theta_{2 3}}}\right)^{\frac{\theta_{2 3}}{\theta_{1 1}}}\right)^{\frac{\theta_{1 1}}{\theta_{0 0}}}\right) \left(\left(e^{\frac{v_{0}}{\theta_{2 0}}} + e^{\frac{v_{1}}{\theta_{2 0}}} + e^{\frac{v_{2}}{\theta_{2 0}}}\right)^{\frac{\theta_{2 0}}{\theta_{1 0}}} + \left(e^{\frac{v_{3}}{\theta_{2 1}}} + e^{\frac{v_{4}}{\theta_{2 1}}} + e^{\frac{v_{5}}{\theta_{2 1}}}\right)^{\frac{\theta_{2 1}}{\theta_{1 0}}}\right) \left(e^{\frac{v_{0}}{\theta_{2 0}}} + e^{\frac{v_{1}}{\theta_{2 0}}} + e^{\frac{v_{2}}{\theta_{2 0}}}\right)}.">
 
 ## Self-elasticity
 The self-elasticity of the node is
-<img src="https://render.githubusercontent.com/render/math?math=self\_elas = \beta p_{0} \left(- s_{3} + \frac{1}{\theta_{2 0}} - \frac{s_{3}}{s_{2} \theta_{2 0}} + \frac{s_{3}}{s_{2} \theta_{1 0}} - \frac{s_{3}}{s_{1} \theta_{1 0}} + \frac{s_{3}}{s_{1} \theta_{0 0}} + \frac{s_{3}}{s_{0}} - \frac{s_{3}}{s_{0} \theta_{0 0}}\right),"> and the cross-elasticity of the node with another node within the same group in the second to last layer is
+
+<img src="https://render.githubusercontent.com/render/math?math=self\_elas = \beta p_{0} \left(- s_{3} + \frac{1}{\theta_{2 0}} - \frac{s_{3}}{s_{2} \theta_{2 0}} + \frac{s_{3}}{s_{2} \theta_{1 0}} - \frac{s_{3}}{s_{1} \theta_{1 0}} + \frac{s_{3}}{s_{1} \theta_{0 0}} + \frac{s_{3}}{s_{0}} - \frac{s_{3}}{s_{0} \theta_{0 0}}\right),">
+
+and the cross-elasticity of the node with another node within the same group in the second to last layer is
+
 <img src="https://render.githubusercontent.com/render/math?math=cross\_elas = \beta p_{1} \left(- s_{3} - \frac{s_{3}}{s_{2} \theta_{2 0}} + \frac{s_{3}}{s_{2} \theta_{1 0}} - \frac{s_{3}}{s_{1} \theta_{1 0}} + \frac{s_{3}}{s_{1} \theta_{0 0}} + \frac{s_{3}}{s_{0}} - \frac{s_{3}}{s_{0} \theta_{0 0}}\right).">
 
 
@@ -207,7 +212,7 @@ s_simp
 
 
 
-$$- s_{3}^{2} + \frac{s_{3}}{\theta_{2 0}} - \frac{s_{3}^{2}}{s_{2} \theta_{2 0}} + \frac{s_{3}^{2}}{s_{2} \theta_{1 0}} - \frac{s_{3}^{2}}{s_{1} \theta_{1 0}} + \frac{s_{3}^{2}}{s_{1} \theta_{0 0}} + \frac{s_{3}^{2}}{s_{0}} - \frac{s_{3}^{2}}{s_{0} \theta_{0 0}}$$
+<img src="https://render.githubusercontent.com/render/math?math=- s_{3}^{2} + \frac{s_{3}}{\theta_{2 0}} - \frac{s_{3}^{2}}{s_{2} \theta_{2 0}} + \frac{s_{3}^{2}}{s_{2} \theta_{1 0}} - \frac{s_{3}^{2}}{s_{1} \theta_{1 0}} + \frac{s_{3}^{2}}{s_{1} \theta_{0 0}} + \frac{s_{3}^{2}}{s_{0}} - \frac{s_{3}^{2}}{s_{0} \theta_{0 0}}">
 
 
 
@@ -222,7 +227,7 @@ output
 
 
 
-$$\beta p_{0} \left(- s_{3} + \frac{1}{\theta_{2 0}} - \frac{s_{3}}{s_{2} \theta_{2 0}} + \frac{s_{3}}{s_{2} \theta_{1 0}} - \frac{s_{3}}{s_{1} \theta_{1 0}} + \frac{s_{3}}{s_{1} \theta_{0 0}} + \frac{s_{3}}{s_{0}} - \frac{s_{3}}{s_{0} \theta_{0 0}}\right)$$
+<img src="https://render.githubusercontent.com/render/math?math=\beta p_{0} \left(- s_{3} + \frac{1}{\theta_{2 0}} - \frac{s_{3}}{s_{2} \theta_{2 0}} + \frac{s_{3}}{s_{2} \theta_{1 0}} - \frac{s_{3}}{s_{1} \theta_{1 0}} + \frac{s_{3}}{s_{1} \theta_{0 0}} + \frac{s_{3}}{s_{0}} - \frac{s_{3}}{s_{0} \theta_{0 0}}\right)">
 
 
 
@@ -257,7 +262,7 @@ beta * p_1 * simplify(s_simp / s_v_0)
 
 
 
-$$\beta p_{1} \left(- s_{3} + \frac{s_{3}}{s_{0}} - \frac{s_{3}}{s_{0} \theta_{0 0}}\right)$$
+<img src="https://render.githubusercontent.com/render/math?math=\beta p_{1} \left(- s_{3} + \frac{s_{3}}{s_{0}} - \frac{s_{3}}{s_{0} \theta_{0 0}}\right)">
 
 
 
@@ -278,6 +283,6 @@ beta * p_1 * simplify(s_simp)
 
 
 
-$$- \beta p_{1} s_{3}$$
+<img src="https://render.githubusercontent.com/render/math?math=- \beta p_{1} s_{3}">
 
 
