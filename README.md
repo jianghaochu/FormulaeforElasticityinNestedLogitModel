@@ -13,7 +13,7 @@ import sys
 init_printing()
 ```
 
-Before doing the real math, first let us familiarize ourselves with the basic functions in SymPy that we are going to use. Before using a symbolic mathematical variable, we have to define the variable using `Symbol()`. Then we can go on and doing simple mathematics just like what we will do in Python.
+Before doing the real math, first let us familiarize ourselves with the basic functions in SymPy that we are going to use. Before using a symbolic mathematical variable, we have to define the variable using `Symbol()`. Then we can go on and doing simple mathematics just like how we will do them in Python.
 
 
 ```python
