@@ -121,8 +121,8 @@ Now that we finished setting up our model we can start calculating the formulae 
 
 ## Self-elasticity
 The self-elasticity of the node is
-<img src="https://render.githubusercontent.com/render/math?math=self\_elas = \beta p_{0} \left(- s_{3} + \frac{1}{\theta_{2 0}} - \frac{s_{3}}{s_{2} \theta_{2 0}} + \frac{s_{3}}{s_{2} \theta_{1 0}} - \frac{s_{3}}{s_{1} \theta_{1 0}} + \frac{s_{3}}{s_{1} \theta_{0 0}} + \frac{s_{3}}{s_{0}} - \frac{s_{3}}{s_{0} \theta_{0 0}}\right), $$ and the cross-elasticity of the node with another node within the same group in the second to last layer is
-$$ cross\_elas = \beta p_{1} \left(- s_{3} - \frac{s_{3}}{s_{2} \theta_{2 0}} + \frac{s_{3}}{s_{2} \theta_{1 0}} - \frac{s_{3}}{s_{1} \theta_{1 0}} + \frac{s_{3}}{s_{1} \theta_{0 0}} + \frac{s_{3}}{s_{0}} - \frac{s_{3}}{s_{0} \theta_{0 0}}\right).">
+<img src="https://render.githubusercontent.com/render/math?math=self\_elas = \beta p_{0} \left(- s_{3} + \frac{1}{\theta_{2 0}} - \frac{s_{3}}{s_{2} \theta_{2 0}} + \frac{s_{3}}{s_{2} \theta_{1 0}} - \frac{s_{3}}{s_{1} \theta_{1 0}} + \frac{s_{3}}{s_{1} \theta_{0 0}} + \frac{s_{3}}{s_{0}} - \frac{s_{3}}{s_{0} \theta_{0 0}}\right),"> and the cross-elasticity of the node with another node within the same group in the second to last layer is
+<img src="https://render.githubusercontent.com/render/math?math=cross\_elas = \beta p_{1} \left(- s_{3} - \frac{s_{3}}{s_{2} \theta_{2 0}} + \frac{s_{3}}{s_{2} \theta_{1 0}} - \frac{s_{3}}{s_{1} \theta_{1 0}} + \frac{s_{3}}{s_{1} \theta_{0 0}} + \frac{s_{3}}{s_{0}} - \frac{s_{3}}{s_{0} \theta_{0 0}}\right).">
 
 
 ```python
