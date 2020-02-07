@@ -26,7 +26,7 @@ a + b
 
 <img src="https://render.githubusercontent.com/render/math?math=a %2B b">
 
-Another helpful function in SymPy that we are going to use a lot is taking the derivative, `diff()'.
+Another helpful function in SymPy that we are going to use a lot is taking the derivative, `diff()`.
 
 
 ```python
